@@ -32,6 +32,10 @@ public class Main{
 	                System.out.println("Invalid Input");
 	                continue;
 	            }
+	            catch (IndexOutOfBoundsException e) {
+	                System.out.println("Invalid Input");
+	                continue;
+	            }
 
 
 	            switch (choice) {
@@ -62,7 +66,7 @@ public class Main{
 	                break;
 	        }
 	        System.out.println("Program ended .. .");
-	        System.exit(1);
+	        //System.exit(1);
 
 
 	    }
