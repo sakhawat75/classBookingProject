@@ -3,71 +3,84 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkg7com1025c_work;
 
-/**
- *
- * @author sakhawat
+public class Main {
 
- */
-public class Main{
-	public static void mainMenu() {
-	        boolean exits = false;
+        public static ArrayList<String> userList = new ArrayList();
+        public static Excercise[][][] monthlyTimeTableArray = new Excercise[300][3][];
+        public static int userId;
 
-	        while (!exits) {
-	            Scanner scan = new Scanner(System.in);
-	            System.out.println(
-	                    "\n\n1.\tBook group exercise \n" +
-	                            "2.\tAttend your boked class\n" +
-	                            "3.\tChange Previous booking\n" +
-	                            "4.\tMonthly class report\n" +
-	                            "5.\tMonthly champion class report\n" +
-	                            "6.\tExit\n");
-
-	            System.out.println("Enter your choice::");
-	            int choice = -1;
-	            try {
-	                choice = scan.nextInt();
-	            } catch (Exception e) {
-	                System.out.println("Invalid Input");
-	                continue;
-	            }
-	            catch (IndexOutOfBoundsException e) {
-	                System.out.println("Invalid Input");
-	                continue;
-	            }
+        public static void main(String[] arg) {
+            loadUsersFromList();
+            loadExercisesFromFile();
+            getUserId();//current user id
 
 
-	            switch (choice) {
-	                case 1://Book group excercise
-	                    bookGroupExcerciseMenu(false);
-	                    break;
-	                case 2://attend your booked class/review
-	                    attendBookedClass();
-	                    break;
-	                case 3://change previous booking
-	                    changeBooking();
-	                    break;
-	                case 4://monthly report
-	                    monthlyReport();
-	                    break;
-	                case 5:
-	                    monthlyChampionReport();
-	                    break;
-	                case 6:
-	                    exits = true;
-	                    break;
+            MenuGenerator.mainMenu();
 
-	                default:
-	                    System.out.println("Incorrect input!!! Please re-enter choice from our menu");
-	            }
-
-	            if (exits)
-	                break;
-	        }
-	        System.out.println("Program ended .. .");
-	        //System.exit(1);
+        }
 
 
-	    }
-}
+
+    public static double getClassMonthlyIncome(String month, String className) {
+        double amount = 0;
+        for (int i = 0; i < 300; i++) {
+            for (int j = 0; monthlyTimeTableArray[i][0] != null && j < 3; j++) {
+                for (int k = 0; k < 3; k++) {
+
+                    //System.out.println(monthlyTimeTableArray[i][j][k].date.substring(5, 7));
+
+                    //month matched and name matched
+                    if (monthlyTimeTableArray[i][j][k].date.substring(3, 5).equals(month) && monthlyTimeTableArray[i][j][k].name.equals(className)) {//18/04/2020
+
+                        int students = 0;
+                        for (int l = 0; monthlyTimeTableArray[i][0] != null && l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
+                            if (monthlyTimeTableArray[i][j][k].bookedUserId[l] != 0) {
+                                students++;
+                            }
+                        }
+
+                        amount = amount + monthlyTimeTableArray[i][j][k].price * students;
+                    }
+
+                }
+            }
+
+        }
+        return amount;
+    }
+    
+
+    public static void getUserId() {
+        while (true) {
+            System.out.println("\nEnter your user id from below\nId           Name");
+            for (int i = 0; i < userList.size(); i++) {
+                System.out.println(i + 1 + "           " + userList.get(i));
+            }
+
+            try {
+
+
+                System.out.print("Enter your choice: ");
+                Scanner scanner = new Scanner(System.in);
+                userId = scanner.nextInt();
+                if (userId < 1 || userId > 10) {
+                    System.out.print("Invalid input ");
+                    continue;
+                }
+                break;
+            } catch (Exception e) {
+                System.out.println("Invalid input");
+                continue;
+            }
+        }
+    }
+
+    public static void classBooker(boolean bookByName, boolean bookByDate, boolean changeBooking) {
+        if (bookByName) {
+            bookbyClassName(changeBooking);
+        } else if (bookByDate) {
+            bookbyDate(changeBooking);
+        }
+
+    }
