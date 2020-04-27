@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-
 public class Excercise {
     int id;
     public String name;
