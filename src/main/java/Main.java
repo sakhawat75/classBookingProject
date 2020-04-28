@@ -86,8 +86,45 @@ public class Main {
 
     }
 
-    
+    public static boolean bookbyDate(boolean changeBooking) {
+        boolean found = false;
+        while (!found) {
+            System.out.println("\nPlease give the date between Feb 2020 to April 2020, Saturday and Sunday only date format dd/mm/yy");
+            Scanner scanner = new Scanner(System.in);
+            String date = scanner.nextLine();
+            System.out.println("Id     Class name     date      time     day          available seats     price");
 
+            //checking if date exists or not
+            //and printing the available classes on that date
+            for (int i = 0; i < 300 && !found; i++) {
+
+                for (int j = 0; j < 3; j++) {
+                    if (monthlyTimeTableArray[i][j] != null && monthlyTimeTableArray[i][j][0].date.equals(date)) {
+
+                        for (int k = 0; k < 3; k++) {
+                            //printing the available classes on this date
+                            System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + monthlyTimeTableArray[i][j][k].name + "        " + monthlyTimeTableArray[i][j][k].date + "          " + monthlyTimeTableArray[i][j][k].time + "        " + monthlyTimeTableArray[i][j][k].day + "          " + monthlyTimeTableArray[i][j][k].availableSeats + "                   £" + monthlyTimeTableArray[i][j][k].price);
+                        }
+                        found = true;
+
+                    }
+
+                }
+
+            }
+
+            //after date found and printing
+            if (found) {//date found
+
+                return bookTheClassNow(changeBooking);
+
+            } else {
+                System.out.println("please check the condition and try again");
+            }
+
+        }
+        return false;
+    }
 
     public static void loadExercisesFromFile() {
         BufferedReader reader;
@@ -223,4 +260,104 @@ public class Main {
         }
     }
 
+
+
+public static boolean bookbyClassName(boolean changeBooking) {
+        printAvailableExcercises();
+        return bookTheClassNow(changeBooking);
+
+    }
+    public static boolean bookTheClassNow(boolean changeBooking) {
+        while (true) {
+            System.out.print("Enter Class Id to Book Booking: ");
+
+            Scanner scanner = new Scanner(System.in);
+            String in = scanner.nextLine();
+
+            if (in.equals("0")) {
+                //printMainMenu
+                return false;
+            }
+
+
+            int i = 0, j = 0, k = 0;
+            try {
+                if (in.length() == 4) {
+                    i = Integer.parseInt(in.substring(0, 2));
+                    j = Integer.parseInt(in.substring(2, 3));
+                    k = Integer.parseInt(in.substring(3, 4));
+                }
+                if (in.length() == 3) {
+                    i = Integer.parseInt(in.substring(0, 1));
+                    j = Integer.parseInt(in.substring(1, 2));
+                    k = Integer.parseInt(in.substring(2, 3));
+
+                }
+            } catch (Exception e) {
+                System.out.println("Invalid input");
+
+                continue;
+            }
+
+            if (changeBooking) {
+                for (int l = 0; l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
+                    if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == 0) {
+                        monthlyTimeTableArray[i][j][k].bookedUserId[l] = userId;
+                        //decrease capacity
+                        monthlyTimeTableArray[i][j][k].availableSeats--;
+
+                        System.out.println("You booked to the class (class " + monthlyTimeTableArray[i][j][k].name + ", " + monthlyTimeTableArray[i][j][k].date + ", " + monthlyTimeTableArray[i][j][k].time + ")");
+                        return true;
+                    }
+                }
+                System.out.println("Sorry, 1 class can take only 4 student");
+                return false;
+            }
+
+            if (!conflict(i, j)) {
+                for (int l = 0; l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
+                    if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == 0) {
+                        monthlyTimeTableArray[i][j][k].bookedUserId[l] = userId;
+                        //decrease capacity
+                        monthlyTimeTableArray[i][j][k].availableSeats--;
+                        System.out.println("You booked to the class (class " + monthlyTimeTableArray[i][j][k].name + ", " + monthlyTimeTableArray[i][j][k].date + ", " + monthlyTimeTableArray[i][j][k].time + ")");
+                        MenuGenerator.mainMenu();
+                        return true;
+                    }
+                }
+                System.out.println("Sorry, 1 class can take only 4 student");
+
+            } else {
+                System.out.println("You already have another booking in same time.");
+            }
+            return false;
+        }
+
+    }
+
+    public static boolean conflict(int i, int j) {
+        for (int k = 0; k < 3; k++) {
+            for (int l = 0; l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
+                if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == userId) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public static void printAvailableExcercises() {
+        System.out.println("Id     Class name      date        time     day          available seats     price");
+        //obtaining classes names
+        for (int i = 0; i < 300; i++) {
+            //System.out.println("Available Classes for "+monthlyTimeTableArray[i][0][0].date+" on "+ monthlyTimeTableArray[i][0][0].day);
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 3; k++) {
+                    if (monthlyTimeTableArray[i][0] != null) {
+                        System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + monthlyTimeTableArray[i][j][k].name + "        " + monthlyTimeTableArray[i][j][k].date + "          " + monthlyTimeTableArray[i][j][k].time + "        " + monthlyTimeTableArray[i][j][k].day + "           " + monthlyTimeTableArray[i][j][k].availableSeats + "                   £" + monthlyTimeTableArray[i][j][k].price);
+                    }
+                }
+            }
+
+        }
+    }
 }

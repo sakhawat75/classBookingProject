@@ -1,0 +1,219 @@
+01/02/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+01/02/20#Saturday#M#2#Zomba#30#2#0#0#1#1#2#4#5
+01/02/20#Saturday#M#3#Box Fit#50#2#0#0#0#0#2#6#7
+01/02/20#Saturday#A#2#Zomba#30#2#0#0#0#2#0#4#5
+01/02/20#Saturday#A#1#Yoga#40#2#0#0#0#2#0#1#2
+01/02/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+01/02/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+01/02/20#Saturday#E#2#Zomba#30#3#0#0#0#1#0#1
+01/02/20#Saturday#E#1#Yoga#40#3#0#0#0#1#0#2
+#
+02/02/20#Sunday#M#4#Body blitz#100#3#0#0#0#0#1#3
+02/02/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+02/02/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+02/02/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+02/02/20#Sunday#A#1#Yoga#40#2#0#0#0#2#0#6#5
+02/02/20#Sunday#A#3#Box Fit#50#1#0#0#1#2#0#9#10#8
+02/02/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+02/02/20#Sunday#E#2#Zomba#30#1#0#0#0#3#0#2#3#1
+02/02/20#Sunday#E#3#Box Fit#50#3#0#0#0#0#1#8
+#
+8/02/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+8/02/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+8/02/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+8/02/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+8/02/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+8/02/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+8/02/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+8/02/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+8/02/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+09/02/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+09/02/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+09/02/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+09/02/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+09/02/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+09/02/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+09/02/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+09/02/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+09/02/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
+#
+15/02/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+15/02/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+15/02/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+15/02/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+15/02/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+15/02/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+15/02/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+15/02/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+15/02/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+16/02/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+16/02/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+16/02/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+16/02/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+16/02/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+16/02/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+16/02/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+16/02/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+16/02/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
+#
+22/02/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+22/02/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+22/02/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+22/02/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+22/02/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+22/02/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+22/02/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+22/02/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+22/02/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+23/02/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+23/02/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+23/02/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+23/02/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+23/02/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+23/02/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+23/02/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+23/02/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+23/02/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
+#
+29/02/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+29/02/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+29/02/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+29/02/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+29/02/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+29/02/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+29/02/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+29/02/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+29/02/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+01/03/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+01/03/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+01/03/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+01/03/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+01/03/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+01/03/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+01/03/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+01/03/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+01/03/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
+#
+07/03/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+07/03/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+07/03/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+07/03/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+07/03/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+07/03/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+07/03/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+07/03/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+07/03/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+08/03/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+08/03/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+08/03/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+08/03/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+08/03/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+08/03/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+08/03/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+08/03/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+08/03/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
+#
+14/03/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+14/03/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+14/03/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+14/03/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+14/03/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+14/03/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+14/03/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+14/03/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+14/03/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+15/03/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+15/03/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+15/03/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+15/03/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+15/03/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+15/03/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+15/03/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+15/03/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+15/03/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
+#
+21/03/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+21/03/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+21/03/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+21/03/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+21/03/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+21/03/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+21/03/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+21/03/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+21/03/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+22/03/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+22/03/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+22/03/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+22/03/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+22/03/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+22/03/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+22/03/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+22/03/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+22/03/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
+#
+28/03/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+28/03/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+28/03/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+28/03/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+28/03/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+28/03/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+28/03/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+28/03/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+28/03/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+29/03/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+29/03/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+29/03/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+29/03/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+29/03/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+29/03/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+29/03/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+29/03/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+29/03/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
+#
+04/04/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+04/04/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+04/04/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+04/04/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+04/04/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+04/04/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+04/04/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+04/04/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+04/04/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+05/04/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+05/04/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+05/04/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+05/04/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+05/04/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+05/04/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+05/04/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+05/04/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+05/04/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
+#
+11/04/20#Saturday#M#1#Yoga#40#4#0#0#0#0#0
+11/04/20#Saturday#M#2#Zomba#30#4#0#0#0#0#0
+11/04/20#Saturday#M#3#Box Fit#50#4#0#0#0#0#0
+11/04/20#Saturday#A#2#Zomba#30#4#0#0#0#0#0
+11/04/20#Saturday#A#1#Yoga#40#4#0#0#0#0#0
+11/04/20#Saturday#A#3#Box Fit#50#4#0#0#0#0#0
+11/04/20#Saturday#E#4#Body blitz#100#4#0#0#0#0#0
+11/04/20#Saturday#E#2#Zomba#30#4#0#0#0#0#0
+11/04/20#Saturday#E#1#Yoga#40#4#0#0#0#0#0
+#
+12/04/20#Sunday#M#4#Body blitz#100#4#0#0#0#0#0
+12/04/20#Sunday#M#2#Zomba#30#4#0#0#0#0#0
+12/04/20#Sunday#M#3#Box Fit#50#4#0#0#0#0#0
+12/04/20#Sunday#A#2#Zomba#30#4#0#0#0#0#0
+12/04/20#Sunday#A#1#Yoga#40#4#0#0#0#0#0
+12/04/20#Sunday#A#3#Box Fit#50#4#0#0#0#0#0#
+12/04/20#Sunday#E#4#Body blitz#100#4#0#0#0#0#0
+12/04/20#Sunday#E#2#Zomba#30#4#0#0#0#0#0
+12/04/20#Sunday#E#3#Box Fit#50#4#0#0#0#0#0
