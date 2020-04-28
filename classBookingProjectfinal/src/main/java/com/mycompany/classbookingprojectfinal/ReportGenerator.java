@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -46,10 +47,18 @@ public class ReportGenerator {
                                 }
                             }
 
-                            
-                            
+                            //rating
+                            double rating = 0.0;
+                            double count = 0;
+                            for (int l = 0; Main.monthlyTimeTableArray[i][0] != null && l < Main.monthlyTimeTableArray[i][j][k].rating.length; l++) {
+                                if (Main.monthlyTimeTableArray[i][j][k].rating[l] != 0) {
+                                    rating += Main.monthlyTimeTableArray[i][j][k].rating[l] * (l + 1);
+                                    count += Main.monthlyTimeTableArray[i][j][k].rating[l];
+                                }
+                            }
+                            rating = rating / count;
 
-                            System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + Main.monthlyTimeTableArray[i][j][k].date + "      " + Main.monthlyTimeTableArray[i][j][k].time + "      " + Main.monthlyTimeTableArray[i][j][k].name + "         " + students + "                  " );//Date \t\tClass Name \t\tTotal Student\t\tAverage Rating");
+                            System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + Main.monthlyTimeTableArray[i][j][k].date + "      " + Main.monthlyTimeTableArray[i][j][k].time + "      " + Main.monthlyTimeTableArray[i][j][k].name + "         " + students + "                  " + rating);//Date \t\tClass Name \t\tTotal Student\t\tAverage Rating");
                         }
                     }
                 }
@@ -62,5 +71,49 @@ public class ReportGenerator {
 
     }
 
-    
+    public static void monthlyChampionReport() {
+        String id;
+        while (true) {
+            System.out.println("Id \t\t\tName\n" +
+                    "2\t\t\tFeb\n" +
+                    "3\t\t\tMar\n" +
+                    "4\t\t\tApril\n");
+
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Enter the month id for monthly Champion report:");
+            id = scan.nextLine();
+            if (id.length() == 1) {
+                id = "0" + id;
+            }
+            try {
+                if (Integer.parseInt(id) < 2 || Integer.parseInt(id) > 5) {
+                    System.out.println("Invalid input");
+                    continue;
+                }
+            } catch (Exception e) {
+                System.out.println("Invalid input");
+                continue;
+            }
+
+
+            ArrayList<String> countList = new ArrayList<>();
+
+            System.out.println("Class Name \t\tTotal income");
+            for (int i = 0; i < 300; i++) {
+                for (int j = 0; Main.monthlyTimeTableArray[i][0] != null && j < 3; j++) {
+                    for (int k = 0; k < 3; k++) {
+                        //month matched
+                        if (!countList.contains(Main.monthlyTimeTableArray[i][j][k].name) && Main.monthlyTimeTableArray[i][j][k].date.substring(3, 5).equals(id)) {//18/04/2020
+                            System.out.println(Main.monthlyTimeTableArray[i][j][k].name + "             " + Main.getClassMonthlyIncome(id, Main.monthlyTimeTableArray[i][j][k].name));
+                            countList.add(Main.monthlyTimeTableArray[i][j][k].name);
+                        }
+                    }
+                }
+            }
+
+            break;
+        }
+
+
+    }
 }
