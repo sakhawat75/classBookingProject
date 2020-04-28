@@ -85,7 +85,69 @@ public class Main {
         }
 
     }
+     public static void attendBookedClass() {
+        printCurrentUserBookedClasses();
+        reviewTheClass();
 
+    }
+     public static void printCurrentUserBookedClasses() {
+        System.out.println("Id     Class name       date      time     day          available seats     price");
+        for (int i = 0; i < 300; i++) {
+            for (int j = 0; monthlyTimeTableArray[i][0] != null && j < 3; j++) {
+                for (int k = 0; k < 3; k++) {
+                    for (int l = 0; monthlyTimeTableArray[i][0] != null && l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
+                        if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == userId) {
+                            //return true;
+                            System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + monthlyTimeTableArray[i][j][k].name + "        " + monthlyTimeTableArray[i][j][k].date + "          " + monthlyTimeTableArray[i][j][k].time + "        " + monthlyTimeTableArray[i][j][k].day + "           " + monthlyTimeTableArray[i][j][k].availableSeats + "                   £" + monthlyTimeTableArray[i][j][k].price);
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public static void reviewTheClass() {
+        while (true) {
+            try {
+                System.out.print("Enter Class Id to review (-1 to go back to Main Menu): ");
+
+                Scanner scanner = new Scanner(System.in);
+                String in = scanner.nextLine();
+
+                if(in.equals("-1")){
+                    MenuGenerator.mainMenu();
+                    return;
+                }
+                System.out.println("Enter Your Message Feedback");
+                String msg = scanner.nextLine();
+
+                System.out.println("Now please give a rating 1 to 5 in integer number:");
+                int rat = scanner.nextInt();
+
+                int i = 0, j = 0, k = 0;
+                if (in.length() == 4) {
+                    i = Integer.parseInt(in.substring(0, 2));
+                    j = Integer.parseInt(in.substring(2, 3));
+                    k = Integer.parseInt(in.substring(3, 4));
+                }
+                if (in.length() == 3) {
+                    i = Integer.parseInt(in.substring(0, 1));
+                    j = Integer.parseInt(in.substring(1, 2));
+                    k = Integer.parseInt(in.substring(2, 3));
+
+                }
+
+                monthlyTimeTableArray[i][j][k].rating[rat - 1]++;
+
+                System.out.println("Your review saved successfully.");
+                break;
+            } catch (Exception e) {
+                System.out.println("Invalid Input. Try again");
+            }
+        }
+    }
+    
     public static boolean bookbyDate(boolean changeBooking) {
         boolean found = false;
         while (!found) {

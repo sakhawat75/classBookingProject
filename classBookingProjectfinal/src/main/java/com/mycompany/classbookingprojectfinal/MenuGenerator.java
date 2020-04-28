@@ -29,10 +29,11 @@ public class MenuGenerator {
                     bookGroupExcerciseMenu(false);
                     break;
                 case 2://attend your booked class/review
-                    
+                    //Main.bookbyDate(changeBooking);
+                    Main.attendBookedClass();
                     break;
                 case 3://change previous booking
-                    
+                      
                     break;
                 case 4://monthly report
                     
