@@ -38,8 +38,8 @@ public class MenuGenerator {
                 case 4://monthly report
                     ReportGenerator.monthlyReport();
                     break;
-                case 5:
-                    
+                case 5://monthly champion report generator
+                    ReportGenerator.monthlyChampionReport();
                     break;
                 case 6:
                     exits = true;
@@ -52,7 +52,9 @@ public class MenuGenerator {
             if (exits)
                 break;
         }
+        
         System.out.println("Program ended .. .");
+        
         System.exit(1);
 
 
