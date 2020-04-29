@@ -36,7 +36,7 @@ public class MenuGenerator {
                       
                     break;
                 case 4://monthly report
-                    
+                    ReportGenerator.monthlyReport();
                     break;
                 case 5:
                     

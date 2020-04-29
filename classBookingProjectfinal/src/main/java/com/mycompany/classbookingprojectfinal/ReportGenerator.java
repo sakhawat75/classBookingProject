@@ -98,18 +98,7 @@ public class ReportGenerator {
 
             ArrayList<String> countList = new ArrayList<>();
 
-            System.out.println("Class Name \t\tTotal income");
-            for (int i = 0; i < 300; i++) {
-                for (int j = 0; Main.monthlyTimeTableArray[i][0] != null && j < 3; j++) {
-                    for (int k = 0; k < 3; k++) {
-                        //month matched
-                        if (!countList.contains(Main.monthlyTimeTableArray[i][j][k].name) && Main.monthlyTimeTableArray[i][j][k].date.substring(3, 5).equals(id)) {//18/04/2020
-                            System.out.println(Main.monthlyTimeTableArray[i][j][k].name + "             " + Main.getClassMonthlyIncome(id, Main.monthlyTimeTableArray[i][j][k].name));
-                            countList.add(Main.monthlyTimeTableArray[i][j][k].name);
-                        }
-                    }
-                }
-            }
+            
 
             break;
         }
