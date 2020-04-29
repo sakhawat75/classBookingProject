@@ -1,9 +1,9 @@
-1#Asad Bhatti
-2#sakhawat
+1#sakhawat
+2#shakib
 3#Ameen
 4#Ali
-5#shakib ul hassan
-6#Shahid Afridi
+5#hassan
+6#Shahid
 7#Bhatti
 8#arshad
 9#sheryar

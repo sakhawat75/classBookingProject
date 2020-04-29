@@ -358,6 +358,46 @@ public class Main {
         }
     }
 
+    public static boolean bookbyDatee(boolean changeBooking) {
+        boolean found = false;
+        while (!found) {
+            System.out.println("\nPlease give the date between Feb 2020 to April 2020, Saturday and Sunday only date format dd/mm/yy");
+            Scanner scanner = new Scanner(System.in);
+            String date = scanner.nextLine();
+            System.out.println("Id     Class name     date      time     day          available seats     price");
+
+            //checking if date exists or not
+            //and printing the available classes on that date
+            for (int i = 0; i < 300 && !found; i++) {
+
+                for (int j = 0; j < 3; j++) {
+                    if (monthlyTimeTableArray[i][j] != null && monthlyTimeTableArray[i][j][0].date.equals(date)) {
+
+                        for (int k = 0; k < 3; k++) {
+                            //printing the available classes on this date
+                            System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + monthlyTimeTableArray[i][j][k].name + "        " + monthlyTimeTableArray[i][j][k].date + "          " + monthlyTimeTableArray[i][j][k].time + "        " + monthlyTimeTableArray[i][j][k].day + "          " + monthlyTimeTableArray[i][j][k].availableSeats + "                   £" + monthlyTimeTableArray[i][j][k].price);
+                        }
+                        found = true;
+
+                    }
+
+                }
+
+            }
+
+            //after date found and printing
+            if (found) {//date found
+
+                return bookTheClassNow(changeBooking);
+
+            } else {
+                System.out.println("please check the condition and try again");
+            }
+
+        }
+        return false;
+    }
+
     public static void loadUsersFromList() {
         BufferedReader reader;
         try {
