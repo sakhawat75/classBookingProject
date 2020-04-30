@@ -6,11 +6,9 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
-
         public static ArrayList<String> userList = new ArrayList();
         public static Excercise[][][] monthlyTimeTableArray = new Excercise[300][3][];
         public static int userId;
-
         public static void main(String[] arg) {
             loadUsersFromList();
             loadExercisesFromFile();
@@ -20,8 +18,6 @@ public class Main {
             MenuGenerator.mainMenu();
 
         }
-
-
 
     public static double getClassMonthlyIncome(String month, String className) {
         double amount = 0;
@@ -40,10 +36,8 @@ public class Main {
                                 students++;
                             }
                         }
-
                         amount = amount + monthlyTimeTableArray[i][j][k].price * students;
                     }
-
                 }
             }
 
@@ -106,10 +100,9 @@ public class Main {
             String in = scanner.nextLine();
 
             if (in.equals("0")) {
-                //printMainMenu
+            
                 return;
             }
-
 
             int i = 0, j = 0, k = 0;
             try {
@@ -135,6 +128,7 @@ public class Main {
                 if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == userId) {
                     if (MenuGenerator.bookGroupExcerciseMenu(true)) {//booked
                         monthlyTimeTableArray[i][j][k].bookedUserId[l] = 0;
+                        
                         monthlyTimeTableArray[i][j][k].availableSeats++;
                         System.out.println("You have successfully changed your booking to the cal ......");
                         MenuGenerator.mainMenu();
@@ -217,64 +211,6 @@ public class Main {
             }
         }
     }
-    public static void printCurrentUserBookedClassess() {
-        System.out.println("Id     Class name       date      time     day          available seats     price");
-        for (int i = 0; i < 300; i++) {
-            for (int j = 0; monthlyTimeTableArray[i][0] != null && j < 3; j++) {
-                for (int k = 0; k < 3; k++) {
-                    for (int l = 0; monthlyTimeTableArray[i][0] != null && l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
-                        if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == userId) {
-                            //return true;
-                            System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + monthlyTimeTableArray[i][j][k].name + "        " + monthlyTimeTableArray[i][j][k].date + "          " + monthlyTimeTableArray[i][j][k].time + "        " + monthlyTimeTableArray[i][j][k].day + "           " + monthlyTimeTableArray[i][j][k].availableSeats + "                   £" + monthlyTimeTableArray[i][j][k].price);
-
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    public static void reviewTheClasss() {
-        while (true) {
-            try {
-                System.out.print("Enter Class Id to review (-1 to go back to Main Menu): ");
-
-                Scanner scanner = new Scanner(System.in);
-                String in = scanner.nextLine();
-
-                if(in.equals("-1")){
-                    MenuGenerator.mainMenu();
-                    return;
-                }
-                System.out.println("Enter Your Message Feedback");
-                String msg = scanner.nextLine();
-
-                System.out.println("Now please give a rating 1 to 5 in integer number:");
-                int rat = scanner.nextInt();
-
-                int i = 0, j = 0, k = 0;
-                if (in.length() == 4) {
-                    i = Integer.parseInt(in.substring(0, 2));
-                    j = Integer.parseInt(in.substring(2, 3));
-                    k = Integer.parseInt(in.substring(3, 4));
-                }
-                if (in.length() == 3) {
-                    i = Integer.parseInt(in.substring(0, 1));
-                    j = Integer.parseInt(in.substring(1, 2));
-                    k = Integer.parseInt(in.substring(2, 3));
-
-                }
-
-                monthlyTimeTableArray[i][j][k].rating[rat - 1]++;
-
-                System.out.println("Your review saved successfully.");
-                break;
-            } catch (Exception e) {
-                System.out.println("Invalid Input. Try again");
-            }
-        }
-    }
-    
     
     public static boolean bookbyDate(boolean changeBooking) {
         boolean found = false;
@@ -428,46 +364,7 @@ public class Main {
         }
     }
 
-    public static boolean bookbyDatee(boolean changeBooking) {
-        boolean found = false;
-        while (!found) {
-            System.out.println("\nPlease give the date between Feb 2020 to April 2020, Saturday and Sunday only date format dd/mm/yy");
-            Scanner scanner = new Scanner(System.in);
-            String date = scanner.nextLine();
-            System.out.println("Id     Class name     date      time     day          available seats     price");
-
-            //checking if date exists or not
-            //and printing the available classes on that date
-            for (int i = 0; i < 300 && !found; i++) {
-
-                for (int j = 0; j < 3; j++) {
-                    if (monthlyTimeTableArray[i][j] != null && monthlyTimeTableArray[i][j][0].date.equals(date)) {
-
-                        for (int k = 0; k < 3; k++) {
-                            //printing the available classes on this date
-                            System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + monthlyTimeTableArray[i][j][k].name + "        " + monthlyTimeTableArray[i][j][k].date + "          " + monthlyTimeTableArray[i][j][k].time + "        " + monthlyTimeTableArray[i][j][k].day + "          " + monthlyTimeTableArray[i][j][k].availableSeats + "                   £" + monthlyTimeTableArray[i][j][k].price);
-                        }
-                        found = true;
-
-                    }
-
-                }
-
-            }
-
-            //after date found and printing
-            if (found) {//date found
-
-                return bookTheClassNow(changeBooking);
-
-            } else {
-                System.out.println("please check the condition and try again");
-            }
-
-        }
-        return false;
-    }
-
+    
     public static void loadUsersFromList() {
         BufferedReader reader;
         try {
