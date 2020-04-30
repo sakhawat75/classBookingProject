@@ -77,6 +77,76 @@ public class Main {
         }
     }
 
+    public static void changeBooking() {
+        boolean found = false;
+        System.out.println("Id     Class name      date        time     day          available seats     price");
+        //obtaining classes names
+        for (int i = 0; i < 300; i++) {
+            //System.out.println("Available Classes for "+monthlyTimeTableArray[i][0][0].date+" on "+ monthlyTimeTableArray[i][0][0].day);
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 3; k++) {
+                    for (int l = 0; l < 4; l++) {
+                        if (monthlyTimeTableArray[i][0] != null && monthlyTimeTableArray[i][j][k].bookedUserId[l] == userId) {
+                            found = true;
+                            System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + monthlyTimeTableArray[i][j][k].name + "        " + monthlyTimeTableArray[i][j][k].date + "          " + monthlyTimeTableArray[i][j][k].time + "        " + monthlyTimeTableArray[i][j][k].day + "           " + monthlyTimeTableArray[i][j][k].availableSeats + "                   £" + monthlyTimeTableArray[i][j][k].price);
+                        }
+                    }
+                }
+
+            }
+        }
+        if (!found) {
+            System.out.println("No booked class found");
+            return;
+        }
+        while (true) {
+            System.out.print("Enter Class Id to Change Booking: ");
+
+            Scanner scanner = new Scanner(System.in);
+            String in = scanner.nextLine();
+
+            if (in.equals("0")) {
+                //printMainMenu
+                return;
+            }
+
+
+            int i = 0, j = 0, k = 0;
+            try {
+                if (in.length() == 4) {
+                    i = Integer.parseInt(in.substring(0, 2));
+                    j = Integer.parseInt(in.substring(2, 3));
+                    k = Integer.parseInt(in.substring(3, 4));
+                }
+                if (in.length() == 3) {
+                    i = Integer.parseInt(in.substring(0, 1));
+                    j = Integer.parseInt(in.substring(1, 2));
+                    k = Integer.parseInt(in.substring(2, 3));
+
+                }
+            } catch (Exception e) {
+                System.out.println("Invalid input");
+
+                continue;
+            }
+
+
+            for (int l = 0; l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
+                if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == userId) {
+                    if (MenuGenerator.bookGroupExcerciseMenu(true)) {//booked
+                        monthlyTimeTableArray[i][j][k].bookedUserId[l] = 0;
+                        monthlyTimeTableArray[i][j][k].availableSeats++;
+                        System.out.println("You have successfully changed your booking to the cal ......");
+                        MenuGenerator.mainMenu();
+                    }
+                    System.out.println("Your booking not found for cancellation");
+                }
+            }
+
+        }
+
+
+    }
     public static void classBooker(boolean bookByName, boolean bookByDate, boolean changeBooking) {
         if (bookByName) {
             bookbyClassName(changeBooking);
