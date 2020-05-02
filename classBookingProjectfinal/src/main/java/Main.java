@@ -56,12 +56,18 @@ public class Main {
             try {
 
 
-                System.out.print("Enter your choice: ");
+                System.out.print("Enter your choice (0 to exit): ");
                 Scanner scanner = new Scanner(System.in);
                 userId = scanner.nextInt();
-                if (userId < 1 || userId > 10) {
+                if (userId < 0 || userId > 10) {
                     System.out.print("Invalid input ");
                     continue;
+                }
+                if(userId==0){
+                    System.out.println("Program ended");
+                    System.exit(userId);
+                    return;
+                    
                 }
                 break;
             } catch (Exception e) {
@@ -94,13 +100,13 @@ public class Main {
             return;
         }
         while (true) {
-            System.out.print("Enter Class Id to Change Booking: ");
+            System.out.print("Enter Class Id to Change Booking(-1 to mainMenu): ");
 
             Scanner scanner = new Scanner(System.in);
             String in = scanner.nextLine();
 
-            if (in.equals("0")) {
-            
+            if (in.equals("-1")) {
+                MenuGenerator.mainMenu();
                 return;
             }
 
@@ -161,6 +167,7 @@ public class Main {
                 for (int k = 0; k < 3; k++) {
                     for (int l = 0; monthlyTimeTableArray[i][0] != null && l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
                         if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == userId) {
+                            
                             //return true;
                             System.out.println(Integer.toString(i) + Integer.toString(j) + Integer.toString(k) + "      " + monthlyTimeTableArray[i][j][k].name + "        " + monthlyTimeTableArray[i][j][k].date + "          " + monthlyTimeTableArray[i][j][k].time + "        " + monthlyTimeTableArray[i][j][k].day + "           " + monthlyTimeTableArray[i][j][k].availableSeats + "                   £" + monthlyTimeTableArray[i][j][k].price);
 
@@ -203,6 +210,15 @@ public class Main {
                 }
 
                 monthlyTimeTableArray[i][j][k].rating[rat - 1]++;
+                
+                for (int l = 0; monthlyTimeTableArray[i][0] != null && l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
+                        if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == userId) {
+                            monthlyTimeTableArray[i][j][k].bookedUserId[l] =-1;
+                            break;
+                            
+                        }
+                    }
+               
 
                 System.out.println("Your review saved successfully.");
                 break;
@@ -216,8 +232,12 @@ public class Main {
         boolean found = false;
         while (!found) {
             System.out.println("\nPlease give the date between Feb 2020 to April 2020, Saturday and Sunday only date format dd/mm/yy");
+            System.out.println("-1 to main menu");
             Scanner scanner = new Scanner(System.in);
             String date = scanner.nextLine();
+            if(date.equals("-1")){
+                MenuGenerator.mainMenu();
+            }
             System.out.println("Id     Class name     date      time     day          available seats     price");
 
             //checking if date exists or not

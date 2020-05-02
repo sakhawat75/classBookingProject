@@ -8,6 +8,7 @@ public class Excercise {
     int [] bookedUserId;//users who booked this excercise
     int rating[];//will contain rating 0 to 5 on every index
     String date;
+    boolean booked=false;
     public Excercise() {
 
     }
