@@ -461,6 +461,7 @@ public static boolean bookbyClassName(boolean changeBooking) {
                 return false;
             }
 
+            try{
             if (!conflict(i, j)) {
                 for (int l = 0; l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
                     if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == 0) {
@@ -477,6 +478,11 @@ public static boolean bookbyClassName(boolean changeBooking) {
             } else {
                 System.out.println("You already have another booking in same time.");
             }
+            }
+            catch(Exception e){
+                System.out.println("wrong class id. try again");
+                return false;
+            }
             return false;
         }
 
@@ -484,10 +490,16 @@ public static boolean bookbyClassName(boolean changeBooking) {
 
     public static boolean conflict(int i, int j) {
         for (int k = 0; k < 3; k++) {
+            try{
             for (int l = 0; l < monthlyTimeTableArray[i][j][k].bookedUserId.length; l++) {
                 if (monthlyTimeTableArray[i][j][k].bookedUserId[l] == userId) {
                     return true;
                 }
+            }
+            }
+            catch(Exception e){
+                System.out.println("Wrong Class Id, try again");
+                return false;
             }
         }
         return false;
