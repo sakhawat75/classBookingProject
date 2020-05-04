@@ -8,7 +8,7 @@ public class MenuGenerator {
             Scanner scan = new Scanner(System.in);
             System.out.println(
                     "\n\n1.\tBook group exercise \n" +
-                            "2.\tAttend your boked class\n" +
+                            "2.\tAttend your booked class\n" +
                             "3.\tChange Previous booking\n" +
                             "4.\tMonthly class report\n" +
                             "5.\tMonthly champion class report\n" +
